@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.button {
+    font-size: rem(18);
+    font-weight: $bold;
+    font-family: $base-font-family;
+    color: $brown;
+    line-height: calc(18 / 15);
+    background: $white;
+    border: 1px solid $gold;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: rem(250);
+    padding-right: rem(16);
+    padding-left: rem(40);
+    padding-block: rem(16);
+    transition: 0.3s ease-in-out;
+    box-shadow: 4px 6px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    transition: 0.2s ease-in-out;
+    background-image: url(../images/common/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: rem(14);
+    width: rem(12);
+    transform: translateY(-50%);
+}
+
+@media (any-hover: hover) {
+    .button:hover {
+        background: $gold;
+        color: $white;
+    }
+    .button:hover::before {
+        filter:  invert(1) brightness(2);
+    }
+}

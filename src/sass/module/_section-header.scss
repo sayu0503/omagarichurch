@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header::before,.section-header::after {
+    border-top: 2px solid $blue-black;
+    content: "";
+    width: rem(30);
+    margin-inline: rem(20);
+    @include mq(md){
+       width: rem(50);
+       max-inline: rem(32);
+    }
+}
+
+.section-header__title {
+    font-size: rem(32);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $blue-black;
+    @include mq(md){
+       font-size: rem(40);
+
+    }
+}
+
