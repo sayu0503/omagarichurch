@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.header {
+    height: rem(70);
+    background-color: rgba($white, $alpha: 0.8);
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    transition: 0.3s;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s ease;
+    @include mq(md){
+       height: rem(90);
+    }
+}
+
+.header.is-open {
+    background-color: $white;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    padding: 0 rem(13);
+
+    @include mq(md) {
+        padding-inline: rem(42);
+    }
+}
+
+.header__drawer {
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.header__logo-link {
+    height: inherit;
+}
+
+.header__logo-icon {
+    height: inherit;
+    display: block;
+    position: relative;
+    z-index: 9999;
+    width: rem(130);
+
+    @include mq(md) {
+        width: rem(179);
+    }
+}
+
+.header__nav {
+    height: inherit;
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+
+}
+
+.header__items {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+
+}
+
+.header__item {
+    height: inherit;
+
+}
+
+.header__link {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: rem(6);
+
+}
+
+.header__link::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: rem(2);
+    background: $blue-black;
+    bottom: rem(4);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+@media (any-hover: hover) {
+    .header__link:hover::after {
+        visibility: visible;
+        bottom: rem(12);
+        opacity: 1;
+    }
+}
+
+.header__link-icon {
+    width: rem(20);
+
+}
+
+.header__link-label {
+    font-size: rem(18);
+    font-weight: $medium;
+    font-family: $second-font-family;
+    color: $blue-black;
+    line-height: (27 / 18);
+
+}
+

@@ -1,0 +1,95 @@
+@use "global" as *;
+
+.top-worship__block {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: rem(24);
+    @include mq(md){
+        display: grid;
+        grid-template-columns: calc(420 / 1100* 100%) 1fr;
+        gap: rem(40);
+        align-items: flex-start;
+    }
+}
+
+.top-worship-info {
+    margin-top: rem(40);
+}
+
+.top-worship-info__description {
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(32 / 18);
+
+}
+
+.top-worship-time {
+    margin-top: rem(24);
+
+
+}
+
+.top-worship-time__title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8);
+    font-size: rem(20);
+    font-weight: $medium;
+    font-family: $base-font-family;
+    color: $white;
+    line-height: calc(14 / 20);
+    background-color: $blue-black;
+    border-radius: rem(10);
+    padding: rem(8) rem(16);
+}
+
+.top-worship-time__title::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/common/clock.png);
+    background-size: contain;
+    width: rem(20);
+    height: rem(20);
+
+}
+
+
+.top-worship-time__list {
+    margin-top: rem(16);
+
+}
+
+.top-worship-time__item {
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(22 / 18);
+}
+
+.top-worship-time__item span{
+    font-weight: $bold;
+}
+
+.top-worship-time__item:not(:first-child){
+    margin-top: rem(16);
+}
+
+.top-worship__btn {
+    margin-top: rem(40);
+
+}
+
+.top-worship-info__image img{
+    filter: contrast(0.9);
+    aspect-ratio: 345 /231;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: rem(90);
+
+}
+

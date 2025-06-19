@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.top-school {
+    background-color: $beige;
+
+}
+
+.top-school-info {
+    margin-top: rem(24);
+    @include mq(md){
+        margin-top: rem(36);
+       display: flex;
+       align-items: center;
+       align-items: flex-start;
+       gap: rem(100);
+    }
+
+}
+
+.top-school-info__image {
+    display: flex;
+    justify-content: center;
+}
+
+
+.top-school-info__image img{
+    aspect-ratio: 293 / 253;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    @include mq(md){
+       width: 100%;
+    }
+}
+
+
+.top-school-info__text {
+    margin-top: rem(24);
+    @include mq(md){
+       margin-top: rem(60);
+    }
+}
+
+.top-school-info__time {
+    text-align: center;
+    font-size: rem(24);
+    font-weight: $bold;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(36 / 24);
+    @include mq(md){
+       text-align: left;
+    }
+
+}
+
+.top-school-info__time span {
+    color: $red;
+}
+
+.top-school-info__description {
+    margin-top: rem(8);
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(32 / 18);
+    @include mq(md){
+       margin-top: rem(20);
+    }
+
+}
+
+.top-school__btn {
+    margin-top: rem(40);
+
+}

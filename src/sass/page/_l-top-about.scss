@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-top-about {
+    margin-top: rem(80);
+    padding-block: rem(73);
+    @include mq(md){
+        margin-top: rem(80);
+        padding-block: rem(90) rem(80);
+    }
+}

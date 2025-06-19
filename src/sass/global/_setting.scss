@@ -15,6 +15,7 @@ $padding-sp: 20px;
 
 $base-font-family: "Noto Sans", sans-serif;
 $second-font-family: "Noto Serif JP", serif;
+$third-font-family: "Libre Caslon Text", serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
@@ -22,8 +23,8 @@ body {
 }
 
 // フォントウェイト
-$regular: 300;
-$normal: 400;
+$regular: 400;
+$medium: 500;
 $bold: 700;
 
 ////////////////////
@@ -34,9 +35,12 @@ $bold: 700;
 $blue-black: #0D2936;
 $white: #fff;
 $gray: #F9F8F6;
+$gray2: #666;
 $beige: #F4EDE3;
 $gold: #D5AF65;
 $brown: #7D5C1E;
+$brown2: #503C28;
+$red: #D64550;
 
 
 

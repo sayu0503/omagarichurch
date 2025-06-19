@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.top-news {
+    background-color: $gray;
+    @include mq(md){
+        position: relative;
+    }
+}
+
+.top-news::after {
+    @include mq(md){
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(../images/common/church.png);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: rem(30);
+        right: calc(50% - min(48vw,rem(640)));
+        width: rem(198);
+        height: rem(204);
+    }
+
+}
+.top-news__items {
+    
+    margin-top: rem(24);
+    margin-inline: auto;
+    display: flex;
+    gap: rem(32);
+    flex-direction: column;
+    @include mq(md){
+        max-width: rem(750);
+        gap: rem(40);
+        margin-top: rem(45);
+    }
+
+}
+
+.top-news__btn {
+    margin-top: rem(40);
+    @include mq(md){
+       margin-top: rem(70);
+    }
+}

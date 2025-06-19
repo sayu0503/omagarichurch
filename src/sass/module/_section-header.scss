@@ -7,13 +7,12 @@
 }
 
 .section-header::before,.section-header::after {
-    border-top: 2px solid $blue-black;
+    border-top: 2px solid $brown;
     content: "";
     width: rem(30);
     margin-inline: rem(20);
     @include mq(md){
        width: rem(50);
-       max-inline: rem(32);
     }
 }
 
@@ -22,9 +21,11 @@
     font-weight: $bold;
     font-family: $second-font-family;
     color: $blue-black;
+    line-height: calc(38 / 32);
+    letter-spacing: 0.05em;
+
     @include mq(md){
        font-size: rem(40);
 
     }
 }
-

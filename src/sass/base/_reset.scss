@@ -36,11 +36,11 @@ body {
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
+  position: relative;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul,
-ol {
+ul{
   list-style: none;
 }
 

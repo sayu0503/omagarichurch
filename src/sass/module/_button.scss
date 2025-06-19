@@ -18,6 +18,13 @@
     padding-block: rem(16);
     transition: 0.3s ease-in-out;
     box-shadow: 4px 6px 4px 0px rgba(0, 0, 0, 0.05);
+    margin-inline: auto;
+}
+
+.buton--left {
+    @include mq(md){
+        margin-inline: initial;
+    }
 }
 
 .button::before {
