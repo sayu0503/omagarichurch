@@ -1,20 +1,19 @@
 @use "global" as *;
 
-
-
 .access__map {
     position: relative;
     width: 100%;
     height: rem(200);
     margin-top: rem(24);
-    @include mq(md){
-       height: rem(345);
-       margin-top: rem(40);
+
+    @include mq(md) {
+        height: rem(345);
+        margin-top: rem(40);
     }
 
 }
 
-.access__map iframe{
+.access__map iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,21 +21,26 @@
     height: 100%;
     border: 0;
 
-
 }
 
-.access__info-box {
+.access__container {
     margin-top: rem(75);
     display: flex;
-    align-items: center;
-    gap: rem(65);
-    justify-content: space-around;
+    flex-direction: column;
 
+    @include mq(md) {
+        flex-direction: initial;
+        align-items: center;
+        gap: rem(65);
+        justify-content: space-around;
+    }
 }
 
+.access__info-box {}
+
 .access__info {
-    @include mq(md){
-       width: rem(393);
+    @include mq(md) {
+        width: rem(393);
     }
 
 }
@@ -48,13 +52,13 @@
 
 }
 
-.access__info-row:not(:first-child){
+.access__info-row:not(:first-child) {
     margin-top: rem(14);
 }
 
 .access__label,
 .access__value {
-    font-size: rem(16);
+    font-size: rem(18);
     font-weight: $bold;
     font-family: $base-font-family;
     color: $blue-black;
@@ -63,8 +67,13 @@
 }
 
 .access__label {
-    width: rem(60);
+    width: rem(70);
+
+    @include mq(md) {
+        width: rem(80);
+    }
 }
+
 .access__value {
     font-weight: $regular;
     width: calc(100% - rem(60));
@@ -72,58 +81,94 @@
 }
 
 .access__guide {
-    @include mq(md){
+    margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: initial;
         position: relative;
         z-index: 3;
-        max-width: rem(350);
-        width: 100%;
+        max-width: 35%;
 
     }
 }
 
 .access__guide::before {
-    content: "";
-    position: absolute;
-    top: -18%;
-    right: calc(50% - min(48vw,rem(230)));
-    background-image: url(../images/common/bg.png);
-    display: inline-block;
-    background-size: contain;
-    width: rem(480);
-    height: rem(480);
-    z-index: -1;
-    background-repeat: no-repeat;
+    @include mq(md) {
+        content: "";
+        position: absolute;
+        top: -18%;
+        right: calc(50% - min(48vw, rem(230)));
+        background-image: url(../images/common/bg.png);
+        display: inline-block;
+        background-size: contain;
+        width: rem(480);
+        height: rem(480);
+        z-index: -1;
+        background-repeat: no-repeat;
+    }
 
 }
 
 
 .access__guide-title {
+    text-align: center;
+    font-size: rem(20);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $blue-black;
+    line-height: calc(30 / 20);
     @include mq(md){
         text-indent: rem(-40);
-        text-align: center;
-        font-size: rem(20);
-        font-weight: $bold;
-        font-family: $second-font-family;
-        color: $blue-black;
-        line-height: calc(30 / 20);
-
     }
-
 }
 
 .access__guide-list {
-    @include mq(md){
-        margin-top: rem(20);
-    }
+    margin-top: rem(20);
+    counter-reset: number;
+
+    @include mq(md) {}
 
 }
 
 .access__guide-item {
+    position: relative;
+    padding-left: rem(40);
+    line-height: calc(32 / 18);
     font-size: rem(18);
     font-weight: $regular;
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-
 }
 
+
+.access__guide-item::before {
+    position: absolute;
+    counter-increment: number;
+    content: counter(number);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    background: $beige;
+    color: $blue-black;
+    font-family: $base-font-family;
+    font-weight: bold;
+    font-size: rem(18);
+    border-radius: 50%;
+    left: 0;
+    width: rem(30);
+    height: rem(30);
+    text-align: center;
+    top: 0;
+    @include mq(md){
+        background: $white;
+        top: rem(2);
+    }
+}
+
+.access__guide-item:not(:first-child) {
+    @include mq(md) {
+        margin-top: rem(8);
+    }
+}

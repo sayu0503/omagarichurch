@@ -4,16 +4,13 @@
     display: flex;
     flex-direction: column-reverse;
     margin-top: rem(24);
-    @include mq(md){
+    gap: rem(40);
+
+    @include mq(md) {
         display: grid;
         grid-template-columns: calc(420 / 1100* 100%) 1fr;
-        gap: rem(40);
-        align-items: flex-start;
+        align-items: end;
     }
-}
-
-.top-worship-info {
-    margin-top: rem(40);
 }
 
 .top-worship-info__description {
@@ -44,6 +41,10 @@
     background-color: $blue-black;
     border-radius: rem(10);
     padding: rem(8) rem(16);
+    @include mq(md){
+       font-size: rem(24);
+       padding: rem(12) rem(17);
+    }
 }
 
 .top-worship-time__title::before {
@@ -53,6 +54,10 @@
     background-size: contain;
     width: rem(20);
     height: rem(20);
+    @include mq(md){
+        width: rem(27);
+        height: rem(27);
+    }
 
 }
 
@@ -68,13 +73,16 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(22 / 18);
+    @include mq(md){
+       font-size: rem(20);
+    }
 }
 
-.top-worship-time__item span{
+.top-worship-time__item span {
     font-weight: $bold;
 }
 
-.top-worship-time__item:not(:first-child){
+.top-worship-time__item:not(:first-child) {
     margin-top: rem(16);
 }
 
@@ -83,7 +91,7 @@
 
 }
 
-.top-worship-info__image img{
+.top-worship-info__image img {
     filter: contrast(0.9);
     aspect-ratio: 345 /231;
     width: 100%;
@@ -92,4 +100,3 @@
     border-top-left-radius: rem(90);
 
 }
-

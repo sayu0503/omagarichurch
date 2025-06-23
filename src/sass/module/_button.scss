@@ -21,8 +21,8 @@
     margin-inline: auto;
 }
 
-.buton--left {
-    @include mq(md){
+.button--left {
+    @include mq(md) {
         margin-inline: initial;
     }
 }
@@ -46,7 +46,8 @@
         background: $gold;
         color: $white;
     }
+
     .button:hover::before {
-        filter:  invert(1) brightness(2);
+        filter: invert(1) brightness(2);
     }
 }

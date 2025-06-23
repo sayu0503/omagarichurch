@@ -1,10 +1,9 @@
 @use "global" as *;
 
 .l-top-news {
-    padding-top: rem(40);
-    padding-bottom: rem(76);
-    @include mq(md){
-       padding-top: rem(110);
-       padding-bottom: rem(83);
+    padding-block: rem(40) rem(76);
+
+    @include mq(md) {
+        padding-block: rem(110) rem(83);
     }
 }

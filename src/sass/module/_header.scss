@@ -2,7 +2,7 @@
 
 .header {
     height: rem(70);
-    background-color: rgba($white, $alpha: 0.8);
+    background-color: rgba($white,0.8);
     z-index: 1000;
     position: fixed;
     width: 100%;
@@ -111,6 +111,7 @@
 
 .header__link-icon {
     width: rem(20);
+    height: rem(20);
 
 }
 
@@ -122,4 +123,3 @@
     line-height: (27 / 18);
 
 }
-

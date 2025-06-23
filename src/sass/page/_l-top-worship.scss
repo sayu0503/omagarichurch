@@ -3,7 +3,8 @@
 .l-top-worship {
     padding-block: rem(75) rem(36);
     background-color: $beige;
-    @include mq(md){
-       padding-block: rem(63) rem(86);
+
+    @include mq(md) {
+        padding-block: rem(63) rem(86);
     }
 }

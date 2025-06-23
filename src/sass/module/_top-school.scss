@@ -7,12 +7,15 @@
 
 .top-school-info {
     margin-top: rem(24);
-    @include mq(md){
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+
+    @include mq(md) {
         margin-top: rem(36);
-       display: flex;
-       align-items: center;
-       align-items: flex-start;
-       gap: rem(100);
+        align-items: center;
+        gap: rem(100);
+        flex-direction: initial;
     }
 
 }
@@ -23,21 +26,14 @@
 }
 
 
-.top-school-info__image img{
+.top-school-info__image img {
     aspect-ratio: 293 / 253;
     width: 80%;
     height: 100%;
     object-fit: cover;
-    @include mq(md){
-       width: 100%;
-    }
-}
 
-
-.top-school-info__text {
-    margin-top: rem(24);
-    @include mq(md){
-       margin-top: rem(60);
+    @include mq(md) {
+        width: 100%;
     }
 }
 
@@ -48,8 +44,9 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(36 / 24);
-    @include mq(md){
-       text-align: left;
+
+    @include mq(md) {
+        text-align: left;
     }
 
 }
@@ -65,13 +62,12 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-    @include mq(md){
-       margin-top: rem(20);
-    }
 
+    @include mq(md) {
+        margin-top: rem(20);
+    }
 }
 
 .top-school__btn {
     margin-top: rem(40);
-
 }
