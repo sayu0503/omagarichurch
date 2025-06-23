@@ -72,7 +72,7 @@
     font-weight: $regular;
     font-family: $base-font-family;
     color: $blue-black;
-    line-height: calc(22 / 18);
+    line-height: calc(26 / 18);
     @include mq(md){
        font-size: rem(20);
     }
