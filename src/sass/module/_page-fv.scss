@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.page-fv {
+    position: relative;
+}
+
+.page-fv image img {
+    min-height: rem(460);
+    @include mq(md){
+        min-height: rem(548);
+    }
+
+}
+
+.page-fv__title-box {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-inline: auto;
+    width: 100%;
+    @include mq(md){
+        margin-inline: auto;
+        top: 50%;
+        right: 50%;
+    }
+
+}
+
+.page-fv__title {
+    font-size: rem(40);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $white;
+    line-height: calc(48 / 40);
+    letter-spacing: 0.4em;
+    text-shadow: 0px 4px 4px rgba(0,0,0, 0.25);
+    @include mq(md){
+        font-size: rem(80);
+    }
+
+}
+

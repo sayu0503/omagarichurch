@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.page-news {
+    background-color: $gray;
+}
+
+.page-news__items {
+    margin-top: rem(32);
+    margin-inline: auto;
+    display: flex;
+    gap: rem(32);
+    flex-direction: column;
+
+    @include mq(md) {
+        max-width: 75%;
+        gap: rem(40);
+        margin-top: rem(48);
+    }
+}
+
+.page-news__pagenavi {
+    margin-top: rem(50);
+    @include mq(md){
+       margin-top: rem(80);
+    }
+}

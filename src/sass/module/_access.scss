@@ -168,7 +168,5 @@
 }
 
 .access__guide-item:not(:first-child) {
-    @include mq(md) {
         margin-top: rem(8);
-    }
 }
