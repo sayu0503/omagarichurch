@@ -36,8 +36,6 @@
     }
 }
 
-.access__info-box {}
-
 .access__info {
     @include mq(md) {
         width: rem(393);

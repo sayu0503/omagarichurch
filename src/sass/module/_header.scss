@@ -12,7 +12,7 @@
     right: 0;
     transition: background-color 0.3s ease;
     @include mq(md){
-       height: rem(90);
+       height: rem(85);
     }
 }
 
@@ -93,8 +93,8 @@
     left: 0;
     content: "";
     width: 100%;
-    height: rem(2);
-    background: $blue-black;
+    height: rem(3);
+    background: $gold;
     bottom: rem(4);
     opacity: 0;
     visibility: hidden;

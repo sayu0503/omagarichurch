@@ -1,0 +1,94 @@
+@use "global" as *;
+
+.page-worship {
+    background-color: $gray;
+
+}
+
+.page-worship__intro {
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(27 / 18);
+    letter-spacing: 0.05em;
+    max-width: rem(825);
+    margin-inline: auto;
+
+}
+
+.page-worship__section {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: rem(32);
+    @include mq(md){
+       margin-top: rem(80);
+       display: grid;
+       gap: rem(40);
+       grid-template-columns: 1fr 1fr;
+       align-items: center;
+    }
+
+}
+
+.page-worship__section--reverse {
+    flex-direction: column-reverse;
+    @include mq(md){
+        flex-direction:initial
+    }
+}
+
+.page-worship__image img {
+    aspect-ratio: 540 /356;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: rem(90);
+
+}
+
+.page-worship__content {
+    margin-top: rem(24);
+}
+
+.page-worship__title {
+    font-size: rem(20);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $blue-black;
+    line-height: calc(28 / 20);
+    border-bottom: 1px solid $gold;
+    padding-bottom: rem(10);
+    @include mq(md){
+       font-size: rem(24);
+    }
+}
+
+.page-worship__meta {
+    margin-top: rem(8);
+
+}
+
+.page-worship__meta li {
+    font-size: rem(18);
+    font-weight: $medium;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(32 / 18);
+    letter-spacing:0.05em;
+    @include mq(md){
+       font-size: rem(20);
+    }
+
+}
+
+.page-worship__text {
+    margin-top: rem(8);
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(32 / 18);
+    letter-spacing:0.05em;
+}

@@ -65,6 +65,19 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 });
 
 
+$(function () {
+  // ページ読み込み時にハッシュがあるかチェック
+  if (location.hash) {
+    var headerHeight = $(".js-header").outerHeight();
+    var target = $(location.hash);
+    if (target.length) {
+      var position = target.offset().top - headerHeight;
+      $("html, body").animate({ scrollTop: position }, 600, "swing");
+    }
+  }
+});
+
+
 
 //スクロールイベントでページトップボタンを表示/非表示
 $(function () {

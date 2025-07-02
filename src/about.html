@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>Omagarichurch</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- ファビコン -->
+  <link rel="”icon”" href="" />
+  <!-- GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <header class="header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="index.html" class="header__logo-link">
+          <img src="./assets/images/common/omagarichurch_logo.svg" alt="大曲教会ロゴ" decoding="async"
+            class="header__logo-icon" width="179" height="63"></a>
+      </h1>
+      <button type="button" class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__items">
+          <li class="header__item">
+            <a href="#" class="header__link">
+              <img src="./assets/images/common/bell.png" alt="ベルのロゴ" decoding="async" class="header__link-icon"
+                width="20" height="22">
+              <span class="header__link-label">お知らせ</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">
+              <img src="./assets/images/common/church_logo.png" alt="教会のロゴ" decoding="async" class="header__link-icon"
+                width="20" height="22">
+              <span class="header__link-label">礼拝案内</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">
+              <img src="./assets/images/common/cross.png" alt="聖書のロゴ" decoding="async" class="header__link-icon"
+                width="20" height="22">
+              <span class="header__link-label">教会紹介</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">
+              <img src="./assets/images/common/paper.png" alt="紙のロゴ" decoding="async" class="header__link-icon"
+                width="20" height="22">
+              <span class="header__link-label">ブログ</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#access" class="header__link">
+              <img src="./assets/images/common/access.png" alt="アクセスのロゴ" decoding="async" class="header__link-icon"
+                width="20" height="22">
+              <span class="header__link-label">アクセス</span>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">
+              <img src="./assets/images/common/key.png" alt="教会のロゴ" decoding="async" class="header__link-icon"
+                width="20" height="22">
+              <span class="header__link-label">会員限定</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header__sp-nav sp-nav js-sp-nav is-activ">
+        <div class="sp-nav__inner">
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__link">お知らせ</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__link">礼拝案内</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__link">教会紹介</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__link">ブログ・コラム</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#access" class="sp-nav__link">アクセス</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#" class="sp-nav__link">会員限定</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!--下層FV-->
+    <div class="page-fv" id="js-fv">
+      <div class="page-fv__inner">
+        <div class="page-fv__image">
+          <picture>
+            <source srcset="./assets/images/common/fv_about-pc.jpg" media="(min-width: 768px)" width="1440" height="548">
+            <img src="./assets/images/common/fv_about-sp.jpg" alt="青空と十字架" decoding="async" width="375"
+              height="460">
+          </picture>
+        </div>
+        <div class="page-fv__title-box">
+          <p class="page-fv__title">教会紹介</p>
+        </div>
+      </div>
+    </div>
+
+     <!-- パンくず -->
+     <div class="page-bredcrumb bredcrumb">
+      <div class="bredcrumb__inner inner">
+        <p class="bredcrumb__text">
+          <a href="index.html" class="berdcrumb__link">トップ</a>
+        </p>
+        <p class="bredcrumb__text">教会紹介</p>
+      </div>
+    </div>
+
+    <section class="page-about l-page-about">
+      <div class="page-about__inner inner">
+        <!-- 牧師挨拶 -->
+        <div class="page-about__pastor-content" id="page-pastor">
+          <div class="page-about__pastor">
+        <div class="page-about__pastor-image">
+          <img src="./assets/images/common/pastor.jpg" alt="田辺由紀夫牧師の写真" decoding="async" loading="lazy"
+          width="345"  height="250">
+        </div>
+        <h3 class="page-about__pastor-name">牧師：田辺 由紀夫</h3>
+      </div>
+        <div class="page-about__pastor-info">
+            <h2 class="page-about__pastor-title">牧師よりご挨拶</h2>
+            <p class="page-about__pastor-text">
+              <span>1956年、青森に生まれ、高校卒業までは津軽弁の世界で育ちました。 東京の大学を卒業後は、5年間サラリーマンとして働きましたが、働く中でふと「疲れている人にこそ、聖書の福音を伝えたい」との思いが強くなり、牧師を志すようになりました。</span>
+              <span>その後、東京神学大学に入学し学びを深め、卒業後は修学旅行以来の大阪へ。 堺市の泉ヶ丘教会で16年、そして万博公園近くの茨木教会で19年間、合わせて35年間にわたり大阪で伝道に仕えてきました。とはいえ、話せるのは“変な大阪弁”ばかりです。</span>
+              <span>2023年4月より、大曲教会の牧師として着任しました。 「青い山脈」を仰ぎながら、清々しい気持ちで、主イエス・キリストの福音をお届けしたいと願っています。<br>そして、「海知らぬ少女の前に 麦藁帽のわれは両手をひろげていたり（寺山修司）」という詩のように、 純粋なまなざしで、皆さまに寄り添いながら語っていきたいと思っています。
+                どうぞお気軽に教会へお越しください。お待ちしております。</span>
+            </p>
+          </div>
+      </div>
+        <!-- 大曲教会のあゆみ -->
+        <section class="page-about__history" id="page-history">
+          <div class="page-about__history-content">
+          <div class="page-about__history-wrap">
+          <h2 class="page-about__history-title">大曲教会のあゆみ</h2>
+          <p class="page-about__history-lead">
+            100年を超える信仰の歩み<br>
+            大曲教会は、1915年に始まりました。 町の人々にキリストの福音を届けたい──<br>
+            そんな想いをもった教師たちの家庭集会からスタートし、地域に根ざした教会として歩みを続けてきました。
+          </p>
+          <div class="page-about__history-timeline">
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1915</p>
+                <p class="flag">大曲開教の始まり
+                </p>
+              </div>
+              <div class="desc">
+                <p>4月大曲農業学校教頭松岡亮作氏及び教師近藤太郎氏が札幌大学生の頃クリスチャンとなり、<br>
+                  農業学校をキリスト教精神を持ってあたらんとする傍ら、大曲町にキリスト教を伝えたいとの熱意から、<br>
+                  秋田日本基教会牧師土田熊治氏を招き、定期的に家庭集会を開く</p>
+              </div>
+            </div>
+          
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1919</p>
+                <p class="flag">大曲日本基教会伝道所として、<br class="u-mobile">東北中会より承認</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1927</p>
+                <p class="flag">伝道教会に昇格</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1936</p>
+                <p class="flag">大曲教会独立自給教会として承認</p>
+              </div>
+            </div>
+
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1941</p>
+                <p class="flag">30余派の福音主義教会が合同し、<br class="u-mobile">日本基教団となる</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1942</p>
+                <p class="flag">日本基督教団 大曲教会に改称</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1949</p>
+                <p class="flag">神代柏林で集団洗礼</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">1983</p>
+                <p class="flag">教会墓地敷地内に記念堂献堂<br class="u-mobile">
+                  (創立70周年記念事業)</p>
+              </div>
+            </div>
+            <div class="timeline_item">
+              <div class="time_date">
+                <p class="time">2015</p>
+                <p class="flag">8月2日創立100周年記念礼拝、祝会</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+        </div>
+        </section>
+
+        <!-- 年間行事 -->
+        <section class="page-about__events">
+          <div class="page-about__events-content">
+            <div class="page-about__events-wrap">
+            <div class="page-about__events-group">
+            <h2 class="page-about__events-title">年間行事</h2>
+            <p class="page-about__events-lead">四季折々のイベントを通して、地域とともに信仰の恵みを分かち合っています。</p>
+          </div>
+          <ul class="page-about__events-list">
+            <li class="page-about__events-item">
+              <p class="page-about__events-month">4月</p>
+              <p class="page-about__text">イースター礼拝・祝会</p>
+            </li>
+            <li class="page-about__events-item">
+              <p class="page-about__events-month">6月</p>
+              <p class="page-about__text">ペンテコステ・花の日・子供の日礼拝</p>
+            </li>
+            <li class="page-about__events-item">
+              <p class="page-about__events-month">8月</p>
+              <p class="page-about__text">創立記念礼拝・逝去者記念礼拝</p>
+            </li>
+            <li class="page-about__events-item">
+              <p class="page-about__events-month">11月</p>
+              <p class="page-about__text">収穫感謝礼拝</p>
+              </li>
+            <li class="page-about__events-item">
+              <p class="page-about__events-month">12月</p>
+              <p class="page-about__text">クリスマス礼拝・<br class="u-mobile">こどもクリスマス会・祝会</p>
+            </li>
+          </ul>
+        </div>
+          <div class="page-about__events-image">
+            <img src="./assets/images/common/about_img2.jpg" alt="白い百合の花" decoding="async" loading="lazy"
+            width="464"  height="292">
+          </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+
+
+
+        <!--よくある質問-->
+        <section class="page-faq l-page-faq">
+          <div class="page-faq__inner inner">
+            <div class="page-faq__title-box">
+          <h2 class="page-faq__title">よくある質問</h2>
+          <p class="page-faq__sub-title">よくご寄せいただくご質問と回答をご紹介します</p>
+        </div>
+            <div class="page-faq__items">
+          <dl class="page-faq__item">
+            <dt class="page-faq__header">大曲教会ってどんな教会ですか？</dt>
+            <dd class="page-faq__content">
+              今から109年前、札幌の大学（現・北海道大学）で学んでいた2人の青年がいました。彼らは、「少年よ、大志を抱け」の言葉で知られるクラーク博士のキリスト教信仰に深く影響を受けました。後に２人は、大曲農業学校の教頭と教師となり、「キリスト教精神に基づいた教育を行い、大曲の地で福音を伝えたい」と願うようになります。その志から秋田教会の牧師を招き、家庭集会を始めたことが、大曲教会の出発点です。また、90年前に最初の会堂が現在地に建てられた際には、当時の大曲町長をはじめ、大曲農業学校（現・大曲農業高校）、大曲高等女学校（現・大曲高校）、大曲小学校の校長先生方から祝辞をいただきました。これらの祝辞は、今も教会内に大切に展示されています。
+            </dd>
+          </dl>
+          <dl class="page-faq__item">
+            <dt class="page-faq__header">初心者でも参加できますか？</dt>
+            <dd class="page-faq__content">
+              もちろんです。<br>
+              聖書や讃美歌、教会に興味のある方はどなたでも大歓迎です。 聖書や讃美歌をお持ちでなくても、
+              どうぞ安心してお越しください。
+            </dd>
+          </dl>
+          <dl class="page-faq__item">
+            <dt class="page-faq__header">「席上献金あります」と書いていますが？</dt>
+            <dd class="page-faq__content">
+              礼拝の中では、神さまへの感謝のしるしとして「献金」の時があります。献金は強制ではありませんので、お志のある方のみお捧げください。
+            </dd>
+          </dl>
+          <dl class="page-faq__item">
+            <dt class="page-faq__header">「旧統一教会」と関係がありますか？</dt>
+            <dd class="page-faq__content">
+              当教会は、いわゆる「旧統一教会」や「エホバの証人（ものみの塔）」「モルモン教」とは一切関係ありません。安心してお越しください。もし不安なことや気になることがありましたら、お気軽にご相談ください。
+              必要に応じて、相談窓口などもご紹介いたします。
+            </dd>
+          </dl>
+          <dl class="page-faq__item">
+            <dt class="page-faq__header">人生相談にも乗っていただけますか？</dt>
+            <dd class="page-faq__content">
+              毎週木曜午後3時から５時まで、心の相談室「ほっとルーム」を開いています。どうそお気軽においでください。あったかいお茶も用意しています。(他の日を希望される方はお電話ください。)
+            </dd>
+          </dl>
+          <dl class="page-faq__item">
+            <dt class="page-faq__header">クリスマスってなんですか？</dt>
+            <dd class="page-faq__content">
+              救い主イエス・キリストの誕生を喜び祝う時です。英語ではChrisrmasと書きますが、Christは「キリスト」、masは「礼拝」
+              を意味します。ですから、クリスマスはキリストを礼拝する時なのです。
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--フッター-->
+  <footer class="footer l-page-footer">
+    <div class="footer__inner inner">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <img src="./assets/images/common/omagarichurch_logo.svg" alt="大曲教会ロゴ" class="footer__logo-img" loading="lazy"
+            decoding="async" width="179" height="63">
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__items">
+            <li class="footter__item">
+              <a href="#" class="footer__link">お知らせ</a>
+            </li>
+          </ul>
+          <ul class="footer__items">
+            <li class="footter__item">
+              <a href="#" class="footer__link">礼拝案内</a>
+            </li>
+          </ul>
+          <ul class="footer__items">
+            <li class="footter__item">
+              <a href="#" class="footer__link">教会紹介</a>
+            </li>
+          </ul>
+          <ul class="footer__items">
+            <li class="footter__item">
+              <a href="#" class="footer__link">ブログ</a>
+            </li>
+          </ul>
+          <ul class="footer__items">
+            <li class="footter__item">
+              <a href="#access" class="footer__link">アクセス</a>
+            </li>
+          </ul>
+          <ul class="footer__items">
+            <li class="footter__item">
+              <a href="#" class="footer__link">会員限定</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__copyright">
+          <small>© 2025&ensp;Omagari&ensp;church.&ensp;All&ensp;rights&ensp;reserved.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="page-top-button js-page-top" aria-label="ページトップに移動する"></a>
+</body>
+
+</html>

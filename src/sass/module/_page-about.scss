@@ -1,0 +1,294 @@
+@use "global" as *;
+
+.page-about {
+    background-color: $gray;
+
+}
+
+
+.page-about__pastor-content {
+    @include mq(md){
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       gap: rem(100);
+       align-items: center;
+    }
+   
+}
+
+.page-about__pastor-image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.page-about__pastor-image img {
+    border-radius: 50%;
+    aspect-ratio: 250 / 250;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-about__pastor-name {
+    margin-top: rem(20);
+    text-align: center;
+    font-size: rem(24);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $blue-black;
+    line-height: calc(28 / 24);
+
+}
+
+.page-about__pastor-info {
+    margin-top: rem(32);
+
+}
+
+.page-about__pastor-title {
+    font-size: rem(24);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $blue-black;
+    line-height: calc(28 / 20);
+    border-bottom: 1px solid $gold;
+    padding-bottom: rem(10);
+    @include mq(md){
+       font-size: rem(32);
+    }
+
+}
+
+.page-about__pastor-text {
+    margin-top: rem(8);
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(32 / 18);
+    letter-spacing:0.05em;
+
+}
+
+.page-about__pastor-text span {
+    margin-top: rem(20);
+    display: inline-block;
+}
+
+.page-about__pastor-text span:first-of-type {
+    margin-top: 0;
+}
+
+.page-about__history {
+    margin-top: rem(40);
+
+}
+
+.page-about__history-content {
+
+}
+
+
+.page-about__history-image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.page-about__history-image img {
+    aspect-ratio: 232 / 373;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+
+    @include mq(md) {
+        width: 100%;
+    }
+}
+
+
+.page-about__history-wrap {
+   
+
+}
+
+.page-about__history-title {
+    margin-top: rem(24);
+    font-size: rem(24);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $blue-black;
+    line-height: calc(36 / 24);
+    letter-spacing: 0.05em;
+    border-left: 6px solid $gold;
+    padding-left: rem(18);
+    @include mq(md){
+        font-size: rem(32);
+     }
+
+}
+
+.page-about__history-lead {
+    margin-top: rem(8);
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(32 / 18);
+    letter-spacing: 0.05em;
+}
+
+.page-about__history-timeline {
+    position: relative;
+    margin: rem(48) auto;
+    padding-bottom: rem(32);
+  }
+
+  .page-about__history-timeline:before {
+    position: absolute;
+    top: 0;
+    left: rem(0);
+    width: rem(3);
+    height: 100%;
+    content: '';
+    background: $gold;
+  }
+
+  .page-about__history-timeline .timeline_item {
+    margin-left: rem(20);
+    margin-top: rem(20);
+    @include mq(md){
+       margin-left: rem(50);
+    }
+  }
+
+  .page-about__history-timeline .timeline_item .time_date .time {
+    font-family: serif;
+    font-size: rem(70);
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    letter-spacing: rem(3);
+    color: rgba($brown,0.1);
+    @include mq(md){
+        font-size: rem(96);
+    }
+  }
+
+  .page-about__history-timeline .timeline_item .time_date .time:before {
+    position: absolute;
+    top: 50%;
+    left: rem(-24);
+    width: rem(10);
+    height: rem(10);
+    content: '';
+    transform: rotate(45deg);
+    border: 3px solid $brown;
+    background: $white;
+    @include mq(md){
+       left: rem(-54);
+    }
+  }
+
+  .page-about__history-timeline .timeline_item .time_date .flag {
+    font-size: rem(18);
+    font-weight: $medium;
+    padding-bottom: rem(8);
+    color: $brown;
+    margin-top: rem(-40);
+    border-bottom: 1px solid $brown;
+    font-weight: $bold;
+    @include mq(md){
+       border: none;
+       font-size: rem(24);
+       margin-top: rem(-60);
+       margin-left: rem(11);
+
+    }
+  }
+
+  .page-about__history-timeline .timeline_item .desc {
+    font-size: rem(16);
+    line-height: 1.8;
+    padding-top: rem(8);
+  }
+
+.page-about__events-content {
+    display: flex;
+    flex-direction: column-reverse;
+    @include mq(md){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: rem(100);
+        align-items: center;
+     }
+
+}
+
+.page-about__events {
+    margin-top: rem(40);
+
+  }
+
+.page-about__events-title {
+    margin-top: rem(24);
+    font-size: rem(24);
+    font-weight: $bold;
+    font-family: $second-font-family;
+    color: $blue-black;
+    line-height: calc(36 / 24);
+    letter-spacing: 0.05em;
+    border-left: 6px solid $gold;
+    padding-left: rem(24);
+
+}
+
+.page-about__events-lead,
+.page-about__events-list {
+    margin-top: rem(8);
+    font-size: rem(18);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(32 / 18);
+
+}
+
+.page-about__events-list {
+    margin-top: rem(24);
+
+}
+
+.page-about__events-item {
+    display: flex;
+    border-bottom: 1px solid $gold;
+    padding-bottom: rem(8);
+}
+
+.page-about__events-item:not(:first-child) {
+    margin-top: rem(8);
+
+}
+
+.page-about__events-month {
+    width: rem(70);
+
+    @include mq(md) {
+        width: rem(80);
+    }
+}
+
+.page-about__text {
+    font-weight: $regular;
+    width: calc(100% - rem(60));
+
+}
+
+.page-about__events-image img{
+    aspect-ratio: 345 / 227;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
