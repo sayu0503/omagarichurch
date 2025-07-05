@@ -1,0 +1,176 @@
+@use "global" as *;
+
+.sidebar__items {
+    padding-inline: rem(25);
+
+    @include mq(md) {
+        padding-inline: 0;
+    }
+}
+
+.sidebar__items--inner {
+    padding-inline: rem(40);
+}
+
+.sidebar__item:not(:first-child) {
+    margin-top: rem(82);
+}
+
+.sidebar__title {
+    font-size: rem(32);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(35 / 24);
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    justify-content: start;
+    border-left: rem(8) solid $gold;
+    padding-left: rem(16);
+}
+
+.sidebar__title::before {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(37);
+    height: rem(37);
+    background-image: url(../images/common/church_logo.png);
+}
+
+.sidebar__article {
+    margin-top: rem(24);
+}
+
+.sidebar__article-item {
+    border: 1px solid $gray;
+    display: flex;
+    gap: rem(16);
+    padding: rem(16);
+    box-shadow: rem(2) rem(2) rem(10) rgba($blue-black, $alpha: 0.25);
+}
+
+.sidebar__article-item:not(:first-child) {
+    margin-top: rem(22);
+}
+
+.sidebar__article-image {
+    overflow: hidden;
+    width: 46%;
+}
+
+.sidebar__article-image img {
+    display: block;
+    aspect-ratio: 121 / 90;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease 0s;
+}
+
+@media (any-hover: hover) {
+    .sidebar__article-item:hover .sidebar__article-image img {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+.sidebar__article-textbox {
+    margin-top: rem(-8);
+    min-width: rem(112);
+}
+
+
+.sidebar__article-data {
+    font-size: rem(12);
+    font-weight: $regular;
+    font-family: $third-font-family;
+    color: $blue-black;
+    line-height: calc(18 / 12);
+}
+
+.sidebar__article-text {
+    font-size: rem(16);
+    font-weight: $medium;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(23 / 16);
+    margin-top: rem(2);
+
+}
+
+.sidebar__archive {
+    margin-top: rem(23);
+}
+
+.sidebar__archive-group {
+    margin-top: rem(7);
+}
+
+.sidebar__archive-calendar,
+.sidebar__archive-month {
+    font-size: rem(24);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    color: $blue-black;
+    line-height: calc(35 / 24);
+    display: none;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    justify-content: start;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.sidebar__archive-month.is-open {
+    display: block;
+}
+
+@media (any-hover: hover) {
+
+    .sidebar__archive-calendar:hover,
+    .sidebar__archive-month:hover {
+        opacity: 0.6;
+    }
+}
+
+.sidebar__archive-calendar::before {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(22);
+    height: rem(18);
+    background-image: url(../images/common/arrow-bottom.png);
+    transform: rotate(-90deg);
+    margin-top: rem(7);
+    transition: all 0.3s;
+}
+
+.sidebar__archive-calendar.is-open::before {
+    transform: rotate(0deg);
+}
+
+
+.sidebar__archive-month::before {
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(18);
+    height: rem(22);
+    background-image: url(../images/common/arrow-right.png);
+}
+
+.sidebar__archive-months {
+    margin-top: rem(4);
+    margin-left: rem(30);
+    display: none;
+
+}
+
+.sidebar__archive-month:not(:first-child) {
+    margin-top: rem(4);
+}

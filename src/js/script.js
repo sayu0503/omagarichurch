@@ -105,3 +105,12 @@ $(function () {
     }
   });
 });
+
+//サイドバーのアコーディオン
+$(function () {
+  $(".js-accordion-title.is-open").next().show();
+  $(".js-accordion-title").on("click", function () {
+    $(this).next().slideToggle(300);
+    $(this).toggleClass("is-open", 300);
+  });
+});

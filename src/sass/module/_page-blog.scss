@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.page-blog {
+    background-color: $gray;
+}
+
+.page-blog__contents {
+    @include mq(md) {
+        display: grid;
+        gap: rem(80);
+        grid-template-columns: 1fr rem(294);
+    }
+}
+
+.page-blog-cards {
+    display: grid;
+    gap: rem(40);
+    grid-template-columns:1fr;
+    @include mq(md){
+        grid-template-columns: 1fr 1fr;
+        gap: rem(34);
+    }
+}
+
+.page-blog__pagenavi {
+    margin-top: rem(80);
+    @include mq(md){
+       margin-top: rem(76);
+    }
+}
+
+.page-blog__sidebar {
+    margin-top: rem(82);
+
+    @include mq(md) {
+        margin-top: 0;
+    }
+}

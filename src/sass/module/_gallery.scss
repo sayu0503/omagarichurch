@@ -22,30 +22,37 @@
 
 .gallery__grid {
     margin-top: rem(24);
+    display: grid;
+    gap: rem(20);
+    @include mq(md) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: rem(250);
+      grid-auto-flow: dense;
+    }
+  }
 
+  .gallery__item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    @include mq(md) {
+      aspect-ratio: unset;
+    }
 }
 
+.gallery__item img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 
-.gallery__grid {
-    display: grid;
-    grid-row-gap: rem(20);
-    @include mq(md){
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: rem(20);
-    }
+      @include mq(md) {
+        position: relative;
+      }
     }
 
-    .gallery__item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        @include mq(md){
-            width: initial;
-            height: initial;
-            object-fit: initial;
-        }
-    }
 
     .gallery__item1 {
         @include mq(md){
@@ -72,3 +79,4 @@
             grid-area: 1 / 3 / 3 / 4;
         }
     }
+

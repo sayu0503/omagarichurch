@@ -212,6 +212,9 @@
     font-size: rem(16);
     line-height: 1.8;
     padding-top: rem(8);
+    @include mq(md){
+       margin-left: rem(11);
+    }
   }
 
 .page-about__events-content {

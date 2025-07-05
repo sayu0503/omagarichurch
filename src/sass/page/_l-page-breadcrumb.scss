@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.l-page-breadcrumb {
+    padding-top: rem(8);
+
+}
+
+.l-page-breadcrumb--404 {
+    padding-top: rem(78);
+    @include mq(md){
+       padding-top: rem(93);
+    }
+}

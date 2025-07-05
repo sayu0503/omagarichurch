@@ -1,9 +1,9 @@
 @use "global" as *;
 
 .l-page-footer {
-    // margin-top: rem(100);
+    margin-top: rem(100);
 
-    // @include mq(md) {
-    //     margin-top: rem(180);
-    // }
+    @include mq(md) {
+        margin-top: rem(180);
+    }
 }
