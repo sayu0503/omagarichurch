@@ -2,7 +2,7 @@
 
 .header {
     height: rem(70);
-    background-color: rgba($white,0.8);
+    background-color: rgba($white, 0.8);
     z-index: 1000;
     position: fixed;
     width: 100%;
@@ -11,8 +11,9 @@
     left: 0;
     right: 0;
     transition: background-color 0.3s ease;
-    @include mq(md){
-       height: rem(85);
+
+    @include mq(md) {
+        height: rem(85);
     }
 }
 
@@ -61,7 +62,6 @@
     @include mq(md) {
         display: block;
     }
-
 }
 
 .header__items {
@@ -69,7 +69,6 @@
     display: flex;
     align-items: center;
     gap: rem(32);
-
 }
 
 .header__item {
@@ -85,7 +84,6 @@
     justify-content: center;
     position: relative;
     gap: rem(6);
-
 }
 
 .header__link::after {
@@ -112,7 +110,6 @@
 .header__link-icon {
     width: rem(20);
     height: rem(20);
-
 }
 
 .header__link-label {
@@ -120,6 +117,5 @@
     font-weight: $medium;
     font-family: $second-font-family;
     color: $blue-black;
-    line-height: (27 / 18);
-
+    line-height: calc(27 / 18);
 }

@@ -2,24 +2,22 @@
 
 .page-member {
     background-color: $gray;
-
 }
 
 .page-member__contents {
-    @include mq(md){
+    @include mq(md) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: rem(80) rem(60);
     }
-
 }
 
 .page-member__box:not(:first-child) {
     margin-top: rem(40);
-    @include mq(md){
-       margin-top: 0;
-    }
 
+    @include mq(md) {
+        margin-top: rem(0);
+    }
 }
 
 .page-member__header {
@@ -28,9 +26,8 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(36 / 24);
-    border-left: 6px solid $gold;
+    border-left: rem(6) solid $gold;
     padding-left: rem(24);
-
 }
 
 .page-member__image {
@@ -47,5 +44,3 @@
         width: 100%;
     }
 }
-
-

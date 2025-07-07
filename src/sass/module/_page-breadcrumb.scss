@@ -4,7 +4,6 @@
     background-color: $gray;
 }
 
-
 .page-breadcrumb__inner {
     display: flex;
     flex-wrap: wrap;
@@ -22,8 +21,8 @@
     height: rem(7);
     margin-left: rem(6);
     margin-right: rem(8);
-    border-top: 1px solid $blue-black;
-    border-right: 1px solid $blue-black;
+    border-top: rem(1) solid $blue-black;
+    border-right: rem(1) solid $blue-black;
     content: '';
 }
 
@@ -37,12 +36,23 @@
 }
 
 .page-breadcrumb__text--color,
-.berdcrumb__link--color {
+.breadcrumb__link--color {
     color: $white;
 }
+
+.breadcrumb__link {
+    transition: .3s ease;
+}
+
+@media (any-hover: hover) {
+    .breadcrumb__link:hover {
+        opacity: 0.6;
+    }
+}
+
 .page-breadcrumb__text--color:not(:last-of-type)::after {
-    border-top: 1px solid $white;
-    border-right: 1px solid $white;
+    border-top: rem(1) solid $white;
+    border-right: rem(1) solid $white;
     content: '';
 }
 

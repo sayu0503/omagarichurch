@@ -2,7 +2,6 @@
 
 .page-worship {
     background-color: $gray;
-
 }
 
 .page-worship__intro {
@@ -14,28 +13,28 @@
     letter-spacing: 0.05em;
     max-width: rem(825);
     margin-inline: auto;
-
 }
 
 .page-worship__section {
     display: flex;
     flex-direction: column;
-
     margin-top: rem(32);
-    @include mq(md){
-       margin-top: rem(80);
-       display: grid;
-       gap: rem(40);
-       grid-template-columns: 1fr 1fr;
-       align-items: center;
+
+    @include mq(md) {
+        margin-top: rem(80);
+        display: grid;
+        gap: rem(40);
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
     }
 
 }
 
 .page-worship__section--reverse {
     flex-direction: column-reverse;
-    @include mq(md){
-        flex-direction:initial
+
+    @include mq(md) {
+        flex-direction: initial
     }
 }
 
@@ -50,6 +49,9 @@
 
 .page-worship__content {
     margin-top: rem(24);
+    @include mq(md){
+       margin-top: rem(0);
+    }
 }
 
 .page-worship__title {
@@ -58,16 +60,16 @@
     font-family: $second-font-family;
     color: $blue-black;
     line-height: calc(28 / 20);
-    border-bottom: 1px solid $gold;
+    border-bottom: rem(1) solid $gold;
     padding-bottom: rem(10);
-    @include mq(md){
-       font-size: rem(24);
+
+    @include mq(md) {
+        font-size: rem(24);
     }
 }
 
 .page-worship__meta {
     margin-top: rem(8);
-
 }
 
 .page-worship__meta li {
@@ -76,11 +78,11 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-    letter-spacing:0.05em;
-    @include mq(md){
-       font-size: rem(20);
-    }
+    letter-spacing: 0.05em;
 
+    @include mq(md) {
+        font-size: rem(20);
+    }
 }
 
 .page-worship__text {
@@ -90,5 +92,5 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-    letter-spacing:0.05em;
+    letter-spacing: 0.05em;
 }

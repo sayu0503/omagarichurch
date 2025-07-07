@@ -1,16 +1,14 @@
 @use "global" as *;
 
-
 .single-news {
     background-color: $gray;
 }
 
 .single-news__inner {
-    @include mq(md){
+    @include mq(md) {
         max-width: rem(900);
     }
 }
-
 
 .single-news__title {
     font-size: rem(24);
@@ -20,14 +18,14 @@
     line-height: calc(36 /24);
     margin-top: rem(8);
     padding-bottom: rem(4);
-    border-bottom: 1px solid $gold;
+    border-bottom: rem(1) solid $gold;
     width: 100%;
+
     @include mq(md) {
         font-size: rem(32);
         line-height: calc(46 / 32);
-        padding-bottom: 0;
+        padding-bottom: rem(0);
     }
-
 }
 
 .single-news__image {
@@ -36,11 +34,10 @@
     @include mq(md) {
         margin-top: rem(40);
     }
-
 }
 
 .single-news__image img,
-.single-news__container img  {
+.single-news__container img {
     aspect-ratio: 345 / 231;
     width: 100%;
     height: 100%;
@@ -49,7 +46,6 @@
     @include mq(md) {
         aspect-ratio: 700 / 468;
     }
-
 }
 
 .single-news__container {
@@ -58,7 +54,6 @@
     @include mq(md) {
         margin-top: rem(40);
     }
-
 }
 
 .single-news__container p {
@@ -66,10 +61,10 @@
     font-size: rem(18);
     font-weight: $regular;
     font-family: $base-font-family;
-    line-height: calc(26  / 16);
+    line-height: calc(26 / 16);
 }
 
-.single-news__container  > :not(:first-child) {
+.single-news__container> :not(:first-child) {
     margin-top: rem(24);
 
     @include mq(md) {

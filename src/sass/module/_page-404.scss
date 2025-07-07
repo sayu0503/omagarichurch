@@ -2,8 +2,9 @@
 
 .page-404 {
     margin-top: rem(25);
-    @include mq(md){
-       margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(40);
     }
 }
 
@@ -11,13 +12,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 .page-404__image {
     max-width: rem(733);
     margin-inline: auto;
-
 }
 
 .page-404__image img {
@@ -28,12 +27,11 @@
 }
 
 .page-404__text-box {
-    margin-inline: auto;
     margin-top: rem(24);
-    @include mq(md){
-       margin-top: rem(32);
-    }
 
+    @include mq(md) {
+        margin-top: rem(32);
+    }
 }
 
 .page-404__text {
@@ -42,10 +40,9 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-
+    text-align: center;
 }
 
 .page-404__btn {
     margin-top: rem(32);
-
 }

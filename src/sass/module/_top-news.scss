@@ -24,6 +24,20 @@
     }
 }
 
+.inner.top-news__inner {
+    width: 100%;
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(600);
+    @include mq(md){
+        max-width: rem(750);
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
 .top-news__items {
     margin-top: rem(24);
     margin-inline: auto;
@@ -32,10 +46,8 @@
     flex-direction: column;
 
     @include mq(md) {
-        max-width: 75%;
         gap: rem(40);
-        margin-top: rem(45);
-    }
+}
 }
 
 .top-news__btn {

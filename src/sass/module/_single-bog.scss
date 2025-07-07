@@ -1,12 +1,11 @@
 @use "global" as *;
 
-
 .single-blog {
     background-color: $gray;
 }
 
 .single-blog__inner {
-    @include mq(md){
+    @include mq(md) {
         max-width: rem(900);
     }
 }
@@ -20,12 +19,13 @@
     line-height: calc(36 /24);
     margin-top: rem(8);
     padding-bottom: rem(4);
-    border-bottom: 1px solid $gold;
+    border-bottom: rem(1) solid $gold;
     width: 100%;
+
     @include mq(md) {
         font-size: rem(32);
         line-height: calc(46 / 32);
-        padding-bottom: 0;
+        padding-bottom: rem(0);
     }
 
 }
@@ -40,7 +40,7 @@
 }
 
 .single-blog__image img,
-.single-blog__container img  {
+.single-blog__container img {
     aspect-ratio: 345 / 231;
     width: 100%;
     height: 100%;
@@ -66,10 +66,10 @@
     font-size: rem(18);
     font-weight: $regular;
     font-family: $base-font-family;
-    line-height: calc(26  / 16);
+    line-height: calc(26 / 16);
 }
 
-.single-blog__container  > :not(:first-child) {
+.single-blog__container> :not(:first-child) {
     margin-top: rem(24);
 
     @include mq(md) {

@@ -7,7 +7,8 @@
 
 .l-page-breadcrumb--404 {
     padding-top: rem(78);
-    @include mq(md){
-       padding-top: rem(93);
+
+    @include mq(md) {
+        padding-top: rem(93);
     }
 }

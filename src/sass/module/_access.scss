@@ -45,7 +45,7 @@
 
 .access__info-row {
     display: flex;
-    border-bottom: 1px solid $gold;
+    border-bottom: rem(1) solid $gold;
     padding-bottom: rem(14);
 
 }
@@ -115,7 +115,8 @@
     font-family: $second-font-family;
     color: $blue-black;
     line-height: calc(30 / 20);
-    @include mq(md){
+
+    @include mq(md) {
         text-indent: rem(-40);
     }
 }
@@ -159,12 +160,13 @@
     height: rem(30);
     text-align: center;
     top: 0;
-    @include mq(md){
+
+    @include mq(md) {
         background: $white;
         top: rem(2);
     }
 }
 
 .access__guide-item:not(:first-child) {
-        margin-top: rem(8);
+    margin-top: rem(8);
 }

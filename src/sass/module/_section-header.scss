@@ -6,13 +6,15 @@
     justify-content: center;
 }
 
-.section-header::before,.section-header::after {
+.section-header::before,
+.section-header::after {
     border-top: 2px solid $brown;
     content: "";
     width: rem(30);
     margin-inline: rem(20);
-    @include mq(md){
-       width: rem(50);
+
+    @include mq(md) {
+        width: rem(50);
     }
 }
 
@@ -24,8 +26,8 @@
     line-height: calc(38 / 32);
     letter-spacing: 0.05em;
 
-    @include mq(md){
-       font-size: rem(40);
+    @include mq(md) {
+        font-size: rem(40);
 
     }
 }

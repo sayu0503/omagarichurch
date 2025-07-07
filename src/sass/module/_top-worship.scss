@@ -19,13 +19,10 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-
 }
 
 .top-worship-time {
     margin-top: rem(24);
-
-
 }
 
 .top-worship-time__title {
@@ -41,9 +38,10 @@
     background-color: $blue-black;
     border-radius: rem(10);
     padding: rem(8) rem(16);
-    @include mq(md){
-       font-size: rem(24);
-       padding: rem(12) rem(17);
+
+    @include mq(md) {
+        font-size: rem(24);
+        padding: rem(12) rem(17);
     }
 }
 
@@ -54,11 +52,11 @@
     background-size: contain;
     width: rem(20);
     height: rem(20);
-    @include mq(md){
+
+    @include mq(md) {
         width: rem(27);
         height: rem(27);
     }
-
 }
 
 
@@ -73,8 +71,9 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(26 / 18);
-    @include mq(md){
-       font-size: rem(20);
+
+    @include mq(md) {
+        font-size: rem(20);
     }
 }
 
@@ -88,7 +87,6 @@
 
 .top-worship__btn {
     margin-top: rem(40);
-
 }
 
 .top-worship-info__image img {
@@ -98,5 +96,4 @@
     height: auto;
     object-fit: cover;
     border-top-left-radius: rem(90);
-
 }

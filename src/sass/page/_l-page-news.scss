@@ -3,8 +3,9 @@
 .l-page-news {
     padding-top: rem(40);
     padding-bottom: rem(100);
-    @include mq(md){
-       padding-top: rem(80);
-       padding-bottom: rem(180);
+
+    @include mq(md) {
+        padding-top: rem(80);
+        padding-bottom: rem(180);
     }
 }

@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .wp-pagenavi {
     display: flex;
     justify-content: center;
@@ -20,18 +19,19 @@
     color: $brown;
     background-color: $white;
     transition: 0.3s ease;
-    border: 1px solid $brown;
+    border: rem(1) solid $brown;
     line-height: calc(19 / 16);
     border-radius: 50%;
 }
 
 @media (any-hover: hover) {
     .wp-pagenavi a:hover {
-        color: #FFF;
+        color: $white;
         background-color: $gold;
         opacity: 1;
     }
 }
+
 .wp-pagenavi--gap {
     gap: rem(23);
 
@@ -41,7 +41,7 @@
 }
 
 .wp-pagenavi span.current {
-    color: #FFF;
+    color: $white;
     background-color: $gold;
     border-color: $brown;
     font-weight: bold;
@@ -64,8 +64,8 @@
     content: '';
     width: rem(10);
     height: rem(10);
-    border-top: solid 1px $brown;
-    border-right: solid 1px $brown;
+    border-top: solid rem(1) $brown;
+    border-right: solid rem(1) $brown;
     position: absolute;
     transition: all 0.3s ease;
 }

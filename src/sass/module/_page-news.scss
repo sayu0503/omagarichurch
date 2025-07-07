@@ -4,6 +4,20 @@
     background-color: $gray;
 }
 
+.inner.page-news__inner {
+    width: 100%;
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(600);
+    @include mq(md){
+        max-width: rem(750);
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
 .page-news__items {
     margin-top: rem(32);
     margin-inline: auto;
@@ -20,7 +34,8 @@
 
 .page-news__pagenavi {
     margin-top: rem(50);
-    @include mq(md){
-       margin-top: rem(80);
+
+    @include mq(md) {
+        margin-top: rem(80);
     }
 }

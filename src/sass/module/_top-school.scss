@@ -2,7 +2,6 @@
 
 .top-school {
     background-color: $beige;
-
 }
 
 .top-school-info {
@@ -17,7 +16,6 @@
         gap: rem(100);
         flex-direction: initial;
     }
-
 }
 
 .top-school-info__image {
@@ -48,7 +46,6 @@
     @include mq(md) {
         text-align: left;
     }
-
 }
 
 .top-school-info__time span {

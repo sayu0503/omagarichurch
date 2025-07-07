@@ -2,24 +2,56 @@
 
 .page-about {
     background-color: $gray;
-
 }
 
 
 .page-about__pastor-content {
-    @include mq(md){
-       display: grid;
-       grid-template-columns: repeat(2,1fr);
-       gap: rem(100);
-       align-items: center;
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(100);
+        align-items: center;
+        position: relative;
     }
-   
+}
+
+.page-about__pastor-content::before {
+    @include mq(md) {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(../images/common/green.png);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: rem(10);
+        left: calc(50% - min(48vw, rem(250)));
+        width: rem(245);
+        height: rem(204);
+        z-index: 10;
+    }
+}
+
+.page-about__pastor-content::after {
+    @include mq(md) {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(../images/common/purple.png);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: rem(-40);
+        left: calc(50% - min(48vw, rem(600)));
+        width: rem(245);
+        height: rem(204);
+        z-index: 1;
+    }
 }
 
 .page-about__pastor-image {
     display: flex;
     justify-content: center;
-
 }
 
 .page-about__pastor-image img {
@@ -38,12 +70,13 @@
     font-family: $second-font-family;
     color: $blue-black;
     line-height: calc(28 / 24);
-
 }
 
 .page-about__pastor-info {
     margin-top: rem(32);
-
+    @include mq(md){
+       margin-top: rem(0);
+    }
 }
 
 .page-about__pastor-title {
@@ -54,10 +87,10 @@
     line-height: calc(28 / 20);
     border-bottom: 1px solid $gold;
     padding-bottom: rem(10);
-    @include mq(md){
-       font-size: rem(32);
-    }
 
+    @include mq(md) {
+        font-size: rem(32);
+    }
 }
 
 .page-about__pastor-text {
@@ -67,8 +100,7 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-    letter-spacing:0.05em;
-
+    letter-spacing: 0.05em;
 }
 
 .page-about__pastor-text span {
@@ -82,13 +114,47 @@
 
 .page-about__history {
     margin-top: rem(40);
-
 }
 
 .page-about__history-content {
-
+    @include mq(md) {
+        position: relative;
+    }
 }
 
+.page-about__history-content::before {
+    @include mq(md) {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(../images/common/history_img1.jpg);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: rem(550);
+        right: calc(50% - min(48vw, rem(650)));
+        width: rem(280);
+        height: rem(400);
+        z-index: 10;
+    }
+}
+
+.page-about__history-content::after {
+    @include mq(md) {
+        position: absolute;
+        content: "";
+        display: block;
+        background-image: url(../images/common/history_img2.jpg);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: rem(1100);
+        right: calc(50% - min(48vw, rem(650)));
+        width: rem(350);
+        height: rem(250);
+        z-index: 10;
+    }
+}
 
 .page-about__history-image {
     display: flex;
@@ -107,12 +173,6 @@
     }
 }
 
-
-.page-about__history-wrap {
-   
-
-}
-
 .page-about__history-title {
     margin-top: rem(24);
     font-size: rem(24);
@@ -121,12 +181,12 @@
     color: $blue-black;
     line-height: calc(36 / 24);
     letter-spacing: 0.05em;
-    border-left: 6px solid $gold;
+    border-left: rem(6) solid $gold;
     padding-left: rem(18);
-    @include mq(md){
-        font-size: rem(32);
-     }
 
+    @include mq(md) {
+        font-size: rem(32);
+    }
 }
 
 .page-about__history-lead {
@@ -143,9 +203,9 @@
     position: relative;
     margin: rem(48) auto;
     padding-bottom: rem(32);
-  }
+}
 
-  .page-about__history-timeline:before {
+.page-about__history-timeline:before {
     position: absolute;
     top: 0;
     left: rem(0);
@@ -153,30 +213,32 @@
     height: 100%;
     content: '';
     background: $gold;
-  }
+}
 
-  .page-about__history-timeline .timeline_item {
+.page-about__history-timeline .timeline_item {
     margin-left: rem(20);
     margin-top: rem(20);
-    @include mq(md){
-       margin-left: rem(50);
-    }
-  }
 
-  .page-about__history-timeline .timeline_item .time_date .time {
+    @include mq(md) {
+        margin-left: rem(50);
+    }
+}
+
+.page-about__history-timeline .timeline_item .time_date .time {
     font-family: serif;
     font-size: rem(70);
     font-weight: bold;
     position: relative;
     margin: 0;
     letter-spacing: rem(3);
-    color: rgba($brown,0.1);
-    @include mq(md){
+    color: rgba($brown, 0.1);
+
+    @include mq(md) {
         font-size: rem(96);
     }
-  }
+}
 
-  .page-about__history-timeline .timeline_item .time_date .time:before {
+.page-about__history-timeline .timeline_item .time_date .time:before {
     position: absolute;
     top: 50%;
     left: rem(-24);
@@ -184,14 +246,15 @@
     height: rem(10);
     content: '';
     transform: rotate(45deg);
-    border: 3px solid $brown;
+    border: rem(3) solid $brown;
     background: $white;
-    @include mq(md){
-       left: rem(-54);
-    }
-  }
 
-  .page-about__history-timeline .timeline_item .time_date .flag {
+    @include mq(md) {
+        left: rem(-54);
+    }
+}
+
+.page-about__history-timeline .timeline_item .time_date .flag {
     font-size: rem(18);
     font-weight: $medium;
     padding-bottom: rem(8);
@@ -199,40 +262,41 @@
     margin-top: rem(-40);
     border-bottom: 1px solid $brown;
     font-weight: $bold;
-    @include mq(md){
-       border: none;
-       font-size: rem(24);
-       margin-top: rem(-60);
-       margin-left: rem(11);
 
+    @include mq(md) {
+        border: none;
+        font-size: rem(24);
+        margin-top: rem(-60);
+        margin-left: rem(11);
     }
-  }
+}
 
-  .page-about__history-timeline .timeline_item .desc {
+.page-about__history-timeline .timeline_item .desc {
     font-size: rem(16);
     line-height: 1.8;
     padding-top: rem(8);
-    @include mq(md){
-       margin-left: rem(11);
+
+    @include mq(md) {
+        margin-left: rem(11);
     }
-  }
+}
 
 .page-about__events-content {
     display: flex;
     flex-direction: column-reverse;
-    @include mq(md){
+
+    @include mq(md) {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: rem(100);
         align-items: center;
-     }
-
+    }
 }
 
 .page-about__events {
     margin-top: rem(40);
 
-  }
+}
 
 .page-about__events-title {
     margin-top: rem(24);
@@ -242,9 +306,12 @@
     color: $blue-black;
     line-height: calc(36 / 24);
     letter-spacing: 0.05em;
-    border-left: 6px solid $gold;
+    border-left: rem(6) solid $gold;
     padding-left: rem(24);
 
+    @include mq(md) {
+        margin-top: rem(0);
+    }
 }
 
 .page-about__events-lead,
@@ -255,12 +322,10 @@
     font-family: $base-font-family;
     color: $blue-black;
     line-height: calc(32 / 18);
-
 }
 
 .page-about__events-list {
     margin-top: rem(24);
-
 }
 
 .page-about__events-item {
@@ -271,7 +336,6 @@
 
 .page-about__events-item:not(:first-child) {
     margin-top: rem(8);
-
 }
 
 .page-about__events-month {
@@ -285,13 +349,11 @@
 .page-about__text {
     font-weight: $regular;
     width: calc(100% - rem(60));
-
 }
 
-.page-about__events-image img{
+.page-about__events-image img {
     aspect-ratio: 345 / 227;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }

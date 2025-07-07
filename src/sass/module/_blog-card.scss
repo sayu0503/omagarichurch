@@ -2,7 +2,7 @@
 
 .blog-card {
     background-color: $white;
-    box-shadow: 4px 6px 4px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: rem(4) rem(6) rem(4) rem(0) rgba(0, 0, 0, 0.05);
     display: grid;
     grid-template-rows: auto auto 1fr;
     grid-row: span 4;
@@ -17,7 +17,7 @@
 @media (any-hover: hover) {
     .blog-card:hover {
         transform: scale(1.03);
-        box-shadow: 4px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: rem(4) rem(8) rem(16) rem(0) rgba(0, 0, 0, 0.1);
     }
 }
 
