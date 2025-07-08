@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .l-top-worship {
-    padding-block: rem(80) rem(80);
+    padding-block: rem(80) rem(0);
     background-color: $beige;
 
     @include mq(md) {
-        padding-block: rem(70) rem(70);
+        padding-block: rem(70) rem(0);
     }
 }

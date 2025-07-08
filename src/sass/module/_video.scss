@@ -74,24 +74,26 @@
 
     @include mq(md) {
         width: 50%;
+        height: rem(550);
     }
 }
 
 .video__image img {
     width: 100%;
     aspect-ratio: 265 /376;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     max-width: rem(265);
 
     @include mq(md) {
-        max-width: 100%;
+        max-width: none;
     }
 }
 
 .video__wrap {
     width: rem(1000);
     max-width: 100%;
+    align-items: stretch;
 }
 
 .video__youtube {

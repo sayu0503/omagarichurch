@@ -33,7 +33,7 @@
 .top-about__content {
     display: flex;
     flex-direction: column;
-    gap: rem(80);
+    gap: rem(40);
 
     @include mq(md) {
         flex-direction: initial;
