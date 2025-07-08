@@ -2,10 +2,10 @@
 
 .l-top-about {
     margin-top: rem(80);
-    padding-block: rem(73);
+    padding-block: rem(80);
 
     @include mq(md) {
-        margin-top: rem(80);
-        padding-block: rem(90) rem(80);
+        margin-top: rem(70);
+        padding-block: rem(70);
     }
 }

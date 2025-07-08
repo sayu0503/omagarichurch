@@ -10,6 +10,7 @@
         display: grid;
         grid-template-columns: calc(420 / 1100* 100%) 1fr;
         align-items: end;
+        margin-top: rem(40);
     }
 }
 

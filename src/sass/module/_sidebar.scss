@@ -13,7 +13,7 @@
 }
 
 .sidebar__item:not(:first-child) {
-    margin-top: rem(82);
+    margin-top: rem(80);
 }
 
 .sidebar__title {
@@ -24,10 +24,10 @@
     line-height: calc(35 / 24);
     display: flex;
     align-items: center;
-    gap: rem(16);
+    gap: rem(20);
     justify-content: start;
     border-left: rem(8) solid $gold;
-    padding-left: rem(16);
+    padding-left: rem(20);
 }
 
 .sidebar__title::before {
@@ -84,19 +84,19 @@
 
 
 .sidebar__article-data {
-    font-size: rem(12);
+    font-size: rem(14);
     font-weight: $regular;
-    font-family: $third-font-family;
-    color: $blue-black;
-    line-height: calc(18 / 12);
+    font-family: $base-font-family;
+    color: $gray2;
+    line-height: calc(18 / 14);
 }
 
 .sidebar__article-text {
-    font-size: rem(16);
+    font-size: rem(18);
     font-weight: $medium;
     font-family: $base-font-family;
     color: $blue-black;
-    line-height: calc(23 / 16);
+    line-height: calc(23 / 18);
     margin-top: rem(2);
 
 }

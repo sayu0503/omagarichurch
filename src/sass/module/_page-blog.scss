@@ -24,15 +24,15 @@
 }
 
 .page-blog__pagenavi {
-    margin-top: rem(80);
+    margin-top: rem(40);
 
     @include mq(md) {
-        margin-top: rem(76);
+        margin-top: rem(80);
     }
 }
 
 .page-blog__sidebar {
-    margin-top: rem(82);
+    margin-top: rem(80);
 
     @include mq(md) {
         margin-top: rem(0);

@@ -24,7 +24,7 @@
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-        top: rem(10);
+        top: rem(20);
         left: calc(50% - min(48vw, rem(250)));
         width: rem(245);
         height: rem(204);
@@ -41,7 +41,7 @@
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-        bottom: rem(-40);
+        bottom: rem(-60);
         left: calc(50% - min(48vw, rem(600)));
         width: rem(245);
         height: rem(204);
@@ -60,6 +60,10 @@
     width: 80%;
     height: 100%;
     object-fit: cover;
+    max-width: rem(350);
+    @include mq(md){
+       max-width: inherit;
+    }
 }
 
 .page-about__pastor-name {
@@ -114,6 +118,9 @@
 
 .page-about__history {
     margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(80);
+    }
 }
 
 .page-about__history-content {
@@ -131,7 +138,7 @@
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-        top: rem(550);
+        top: rem(408);
         right: calc(50% - min(48vw, rem(650)));
         width: rem(280);
         height: rem(400);
@@ -148,7 +155,7 @@
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-        top: rem(1100);
+        top: rem(1080);
         right: calc(50% - min(48vw, rem(650)));
         width: rem(350);
         height: rem(250);
@@ -255,7 +262,7 @@
 }
 
 .page-about__history-timeline .timeline_item .time_date .flag {
-    font-size: rem(18);
+    font-size: rem(20);
     font-weight: $medium;
     padding-bottom: rem(8);
     color: $brown;
@@ -272,7 +279,7 @@
 }
 
 .page-about__history-timeline .timeline_item .desc {
-    font-size: rem(16);
+    font-size: rem(18);
     line-height: 1.8;
     padding-top: rem(8);
 
@@ -295,6 +302,9 @@
 
 .page-about__events {
     margin-top: rem(40);
+    @include mq(md){
+       margin-top: rem(80);
+    }
 
 }
 

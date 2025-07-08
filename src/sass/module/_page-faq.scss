@@ -34,20 +34,20 @@
 }
 
 .page-faq__items {
-    margin-top: rem(18);
+    margin-top: rem(24);
     margin-bottom: rem(130);
 
     @include mq(md) {
+        margin-top: rem(40);
         margin-bottom: rem(0);
     }
 }
 
-.page-faq__item {
-    margin-top: rem(32);
-}
-
 .page-faq__item:not(:first-child) {
-    margin-top: rem(32);
+    margin-top: rem(34);
+    @include mq(md){
+       margin-top: rem(40);
+    }
 }
 
 .page-faq__header {

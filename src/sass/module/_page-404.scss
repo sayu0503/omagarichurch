@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .page-404 {
-    margin-top: rem(25);
+    margin-top: rem(40);
 
     @include mq(md) {
-        margin-top: rem(40);
+        margin-top: rem(80);
     }
 }
 
@@ -44,5 +44,8 @@
 }
 
 .page-404__btn {
-    margin-top: rem(32);
+    margin-top: rem(40);
+    @include mq(md){
+       margin-top: rem(60);
+    }
 }

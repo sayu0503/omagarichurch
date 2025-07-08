@@ -18,7 +18,7 @@
 .page-worship__section {
     display: flex;
     flex-direction: column;
-    margin-top: rem(32);
+    margin-top: rem(34);
 
     @include mq(md) {
         margin-top: rem(80);
@@ -28,6 +28,10 @@
         align-items: center;
     }
 
+}
+
+.page-worship__section:first-of-type {
+    margin-top: rem(40);
 }
 
 .page-worship__section--reverse {
@@ -55,17 +59,13 @@
 }
 
 .page-worship__title {
-    font-size: rem(20);
+    font-size: rem(24);
     font-weight: $bold;
     font-family: $second-font-family;
     color: $blue-black;
-    line-height: calc(28 / 20);
+    line-height: calc(32 / 24);
     border-bottom: rem(1) solid $gold;
-    padding-bottom: rem(10);
-
-    @include mq(md) {
-        font-size: rem(24);
-    }
+    padding-bottom: rem(8);
 }
 
 .page-worship__meta {
@@ -73,15 +73,15 @@
 }
 
 .page-worship__meta li {
-    font-size: rem(18);
+    font-size: rem(20);
     font-weight: $medium;
     font-family: $base-font-family;
     color: $blue-black;
-    line-height: calc(32 / 18);
-    letter-spacing: 0.05em;
+    line-height: calc(32 / 20);
 
     @include mq(md) {
         font-size: rem(20);
+        letter-spacing: 0.05em;
     }
 }
 

@@ -23,13 +23,13 @@
     background-image: url(../images/common/leafleft.png);
     display: inline-block;
     background-size: contain;
-    top: 25%;
+    top: 20%;
     left: calc(50% - min(48vw, 210px));
     width: rem(100);
     height: rem(100);
 
     @include mq(md) {
-        top: 30%;
+        top: 0%;
         left: calc(50% - min(48vw, 300px));
         width: rem(150);
         height: rem(150);
@@ -42,13 +42,13 @@
     background-image: url(../images/common/leafright.png);
     display: inline-block;
     background-size: contain;
-    top: 25%;
+    top: 20%;
     right: calc(50% - min(48vw, 210px));
     width: rem(100);
     height: rem(100);
 
     @include mq(md) {
-        top: 30%;
+        top: 0%;
         right: calc(50% - min(48vw, 300px));
         width: rem(150);
         height: rem(150);
@@ -62,7 +62,7 @@
     gap: rem(24);
 
     @include mq(md) {
-        margin-top: rem(110);
+        margin-top: rem(50);
         flex-direction: initial;
     }
 }

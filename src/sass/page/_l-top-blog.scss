@@ -2,5 +2,9 @@
 
 .l-top-blog {
     padding-block: rem(80);
+    @include mq(md){
+        padding-block: rem(70);
+
+    }
 }
 

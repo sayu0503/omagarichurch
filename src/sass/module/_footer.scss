@@ -21,13 +21,16 @@
     @include mq(md) {
         width: rem(200);
         height: rem(200);
-        top: -46%;
+        top: -43%;
     }
 }
 
 .footer__container {
     padding-top: rem(48);
     text-align: center;
+    @include mq(md){
+       padding-top: rem(80);
+    }
 }
 
 .footer__logo {
@@ -45,13 +48,12 @@
 }
 
 .footer__nav {
-    margin-top: rem(24);
+    margin-top: rem(40);
 
     @include mq(md) {
         display: flex;
         justify-content: center;
         gap: rem(32);
-        margin-top: rem(40);
     }
 }
 

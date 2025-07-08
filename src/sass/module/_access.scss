@@ -24,11 +24,12 @@
 }
 
 .access__container {
-    margin-top: rem(75);
+    margin-top: rem(40);
     display: flex;
     flex-direction: column;
 
     @include mq(md) {
+        margin-top: rem(80);
         flex-direction: initial;
         align-items: center;
         gap: rem(65);
@@ -79,7 +80,7 @@
 }
 
 .access__guide {
-    margin-top: rem(40);
+    margin-top: rem(50);
 
     @include mq(md) {
         margin-top: initial;
@@ -115,6 +116,7 @@
     font-family: $second-font-family;
     color: $blue-black;
     line-height: calc(30 / 20);
+    letter-spacing: 0.05em;
 
     @include mq(md) {
         text-indent: rem(-40);

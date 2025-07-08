@@ -29,7 +29,7 @@
 }
 
 .single-news__image {
-    margin-top: rem(23);
+    margin-top: rem(24);
 
     @include mq(md) {
         margin-top: rem(40);
@@ -96,7 +96,7 @@
 
 
 .single-news__pagenavi {
-    margin-top: rem(38);
+    margin-top: rem(40);
 
     @include mq(md) {
         margin-top: rem(80);
