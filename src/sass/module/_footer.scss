@@ -48,9 +48,10 @@
 }
 
 .footer__nav {
-    margin-top: rem(40);
+    margin-top: rem(16);
 
     @include mq(md) {
+        margin-top: rem(40);
         display: flex;
         justify-content: center;
         gap: rem(32);

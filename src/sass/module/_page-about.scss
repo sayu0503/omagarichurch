@@ -10,7 +10,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(100);
-        align-items: center;
+        align-items: flex-end;
         position: relative;
     }
 }
@@ -20,14 +20,14 @@
         position: absolute;
         content: "";
         display: block;
-        background-image: url(../images/common/green.png);
+        background-image: url(../images/common/leaf_top.png);
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-        top: rem(20);
-        left: calc(50% - min(48vw, rem(250)));
-        width: rem(245);
-        height: rem(204);
+        top: rem(-40);
+        left: calc(50% - min(48vw, rem(630)));
+        width: rem(200);
+        height: rem(170);
         z-index: 10;
     }
 }
@@ -37,14 +37,14 @@
         position: absolute;
         content: "";
         display: block;
-        background-image: url(../images/common/purple.png);
+        background-image: url(../images/common/leaf_bottom.png);
         position: absolute;
         background-repeat: no-repeat;
         background-size: cover;
-        bottom: rem(-60);
-        left: calc(50% - min(48vw, rem(600)));
-        width: rem(245);
-        height: rem(204);
+        bottom: rem(-90);
+        right: calc(50% - min(48vw, rem(600)));
+        width: rem(120);
+        height: rem(150);
         z-index: 1;
     }
 }
@@ -55,12 +55,13 @@
 }
 
 .page-about__pastor-image img {
-    border-radius: 50%;
-    aspect-ratio: 250 / 250;
-    width: 80%;
+    aspect-ratio: 310 / 392;
+    width: 75%;
     height: 100%;
     object-fit: cover;
     max-width: rem(350);
+    border-radius: rem(20);
+    box-shadow: 0 rem(4) rem(12) rgba(0, 0, 0, 0.15);
     @include mq(md){
        max-width: inherit;
     }
@@ -69,11 +70,46 @@
 .page-about__pastor-name {
     margin-top: rem(20);
     text-align: center;
-    font-size: rem(24);
+    font-size: rem(32);
     font-weight: $bold;
     font-family: $second-font-family;
     color: $blue-black;
+    line-height: calc(28 / 32);
+    letter-spacing: 0.1em;
+    @include mq(md){
+         font-size: rem(32);
+    }
+}
+
+.page-about__pastor-intro {
+    margin-top: rem(45);
+    text-align: center;
+    font-size: rem(24);
+    font-weight: $regular;
+    font-family: $second-font-family;
+    color: $blue-black;
     line-height: calc(28 / 24);
+    letter-spacing: 1em;
+    position: relative;
+    @include mq(md){
+        font-size: rem(24);
+   }
+}
+
+.page-about__pastor-intro::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/name_line.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: rem(-20);
+    right: calc(50% - min(48vw, rem(134)));
+    width: rem(250);
+    height: rem(150);
+    z-index: 1;
+
 }
 
 .page-about__pastor-info {

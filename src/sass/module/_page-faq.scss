@@ -2,6 +2,7 @@
 
 .page-faq {
     background-color: $white;
+
 }
 
 .inner.page-faq__inner {
@@ -73,6 +74,7 @@
     line-height: calc(32 / 18);
     border: rem(1) solid $gold;
     padding: rem(18);
+    background-color: $white;
 
     @include mq(md) {
         padding: rem(32) rem(40);

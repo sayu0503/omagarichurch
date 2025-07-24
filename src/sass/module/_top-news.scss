@@ -2,6 +2,9 @@
 
 .top-news {
     background-color: $gray;
+    background-image: url(../images/common/news_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include mq(md) {
         position: relative;
