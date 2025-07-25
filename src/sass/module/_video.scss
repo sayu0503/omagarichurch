@@ -34,10 +34,10 @@
     background-image: url(../images/common/leaf_top.png);
     display: inline-block;
     background-size: contain;
-    top: 0%;
+    top: 25%;
     left: calc(50% - min(48vw, 210px));
-    width: rem(100);
-    height: rem(100);
+    width: rem(90);
+    height: rem(90);
     rotate: -100deg;
 
     @include mq(md) {
@@ -54,10 +54,10 @@
     background-image: url(../images/common/leaf_right.png);
     display: inline-block;
     background-size: contain;
-    top: -5%;
+    top: 20%;
     right: calc(50% - min(48vw, 210px));
-    width: rem(100);
-    height: rem(100);
+    width: rem(90);
+    height: rem(90);
     rotate: 10deg;
 
     @include mq(md) {

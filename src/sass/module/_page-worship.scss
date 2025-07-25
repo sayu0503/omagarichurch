@@ -21,9 +21,9 @@
     margin-top: rem(34);
 
     @include mq(md) {
-        margin-top: rem(80);
+        margin-top: rem(90);
         display: grid;
-        gap: rem(40);
+        gap: rem(50);
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
@@ -42,14 +42,57 @@
     }
 }
 
-.page-worship__image img {
-    aspect-ratio: 540 /356;
+.page-worship__image {
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-worship__image::after {
+    @include mq(md){
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url(../images/common/bg_green.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 56%;
+        left: 46%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-top-left-radius: rem(90);
+    }
+  }
+
+  .page-worship__image--right::after {
+    @include mq(md){
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url(../images/common/bg_gold.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 56%;
+        left: 54%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-top-left-radius: rem(90);
+    }
+  }
+
+  .page-worship__image img {
+    display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
+    aspect-ratio: 540 / 356;
     border-top-left-radius: rem(90);
-
-}
+    position: relative;
+    z-index: 5;
+  }
 
 .page-worship__content {
     margin-top: rem(24);
