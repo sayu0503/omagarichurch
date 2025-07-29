@@ -21,6 +21,15 @@
     margin-inline: auto;
 }
 
+.button--offset {
+    color: $white;
+    background: $gold;
+    margin-top: rem(40);
+    @include mq(md){
+      margin-top: rem(8);
+    }
+  }
+
 .button--left {
     @include mq(md) {
         margin-inline: initial;
@@ -41,13 +50,41 @@
     transform: translateY(-50%);
 }
 
+.button--offset::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    transition: 0.2s ease-in-out;
+    color: $white;
+    background-image: url(../images/common/arrow_white.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: rem(14);
+    width: rem(12);
+    transform: translateY(-50%);
+  }
+
 @media (any-hover: hover) {
     .button:hover {
         background: $gold;
         color: $white;
     }
 
+    .button--offset:hover {
+        background: $white;
+        color: $brown;
+
+    }
+
     .button:hover::before {
-        filter: invert(1) brightness(2);
+        background-image: url(../images/common/arrow_white.png);
+    }
+
+    .button--offset:hover::before{
+        background-image: url(../images/common/arrow.png);
+        filter: none;
+
+
     }
 }

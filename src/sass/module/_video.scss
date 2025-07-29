@@ -7,10 +7,6 @@
     }
 }
 
-.video::before {
-    content: "";
-}
-
 .video__section-header {
     position: relative;
 }
@@ -70,67 +66,100 @@
 
 .video__container {
     display: flex;
-    flex-direction: column-reverse;
-    margin-top: rem(32);
-    gap: rem(24);
-
+    flex-direction: column;
     @include mq(md) {
-        margin-top: rem(50);
+        margin-top: rem(20);
         flex-direction: initial;
     }
 }
-
 .video__image {
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-
+    aspect-ratio: 180 / 200;
+    max-width: 80%;
+    margin-inline: auto;
     @include mq(md) {
-        width: 50%;
-        height: rem(550);
+      width: 40%;
+      aspect-ratio: 257 / 365;
+      z-index: 1;
+      margin-inline: rem(0);
+      max-width: initial;
     }
-}
+  }
+
+
+  .video__image::after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/common/kannbann.png);
+        background-repeat: no-repeat;
+        background-size: contain; // 画像比率を保持しつつ縮小
+        background-position: center;
+        z-index: -1;
+        width: 84%;
+        height: 100%;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        top: 57%;
+        left: 49%;
+        transform: translate(-50%, -52%);
+    @include mq(md){
+        width: 90%;
+        height: 100%;
+    }
+  }
 
 .video__image img {
-    width: 100%;
-    aspect-ratio: 265 /376;
-    height: 100%;
-    object-fit: cover;
-    max-width: rem(265);
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 257 / 365;
 
-    @include mq(md) {
-        max-width: none;
-    }
+  @include mq(md) {
+    width: 53%;
+  }
 }
 
 .video__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     width: rem(1000);
     max-width: 100%;
-    align-items: stretch;
+    @include mq(md){
+       width: 80%;
+    }
 }
 
 .video__youtube {
     position: relative;
     width: 100%;
-    height: rem(250);
-
-    @include mq(md) {
-        height: rem(550);
+    height: 100%;
+    aspect-ratio: 16 / 10;
+    margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(0);
+        height: 85%;
     }
 }
 
 .video__iframe {
+    border-radius: rem(20);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
 }
 
 .video__text {
-    margin-top: rem(24);
+    margin-top: rem(40);
     font-size: rem(15);
     font-weight: $medium;
     font-family: $base-font-family;
@@ -139,7 +168,13 @@
     text-align: center;
 
     @include mq(md) {
-        margin-top: rem(40);
+        margin-top: rem(8);
         font-size: rem(18);
+    }
+}
+
+.video__btn {
+    @include mq(md){
+        margin-inline-start: rem(300);
     }
 }
