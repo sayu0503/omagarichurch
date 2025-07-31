@@ -34,11 +34,8 @@
     left: 50%;
     transform: translateX(-50%);
     width: 60%;
-    height: 2px;
+    height: rem(2);
     background-color: $brown;
-    @include mq(md) {
-        
-    }
 }
 
 .video__section-header::after {
@@ -78,7 +75,7 @@
     align-items: center;
     width: 100%;
     aspect-ratio: 180 / 200;
-    max-width: 80%;
+    max-width: 100%;
     margin-inline: auto;
     @include mq(md) {
       width: 40%;
@@ -95,7 +92,7 @@
         position: absolute;
         background-image: url(../images/common/kannbann.png);
         background-repeat: no-repeat;
-        background-size: contain; // 画像比率を保持しつつ縮小
+        background-size: contain;
         background-position: center;
         z-index: -1;
         width: 84%;
@@ -122,14 +119,13 @@
 }
 
 .video__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: rem(1000);
-    max-width: 100%;
     @include mq(md){
-       width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: rem(1000);
+        max-width: 80%;
     }
 }
 
