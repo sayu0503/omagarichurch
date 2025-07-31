@@ -9,6 +9,7 @@
 
 .video__section-header {
     position: relative;
+    text-align: center;
 }
 
 .video__section-header-title {
@@ -18,55 +19,53 @@
     color: $blue-black;
     line-height: calc(38 / 32);
     text-align: center;
+    display: inline-block;
+    position: relative;
 
     @include mq(md) {
         font-size: rem(40);
     }
 }
 
-.video__section-header::before {
-    position: absolute;
+.video__section-header-title::before {
     content: "";
-    background-image: url(../images/common/leaf_top.png);
-    display: inline-block;
-    background-size: contain;
-    top: 25%;
-    left: calc(50% - min(48vw, 210px));
-    width: rem(90);
-    height: rem(90);
-    rotate: -100deg;
-
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background-color: $brown;
     @include mq(md) {
-        top: 0%;
-        left: calc(50% - min(48vw, 300px));
-        width: rem(150);
-        height: rem(150);
+        
     }
 }
 
 .video__section-header::after {
     position: absolute;
     content: "";
-    background-image: url(../images/common/leaf_right.png);
+    background-image: url(../images/common/grapes.png);
     display: inline-block;
     background-size: contain;
-    top: 20%;
-    right: calc(50% - min(48vw, 210px));
-    width: rem(90);
-    height: rem(90);
+    background-repeat: no-repeat;
+    top: 90%;
+    right: calc(50% - min(48vw, 190px));
+    width: rem(75);
+    height: rem(75);
     rotate: 10deg;
 
     @include mq(md) {
         top: -5%;
-        right: calc(50% - min(48vw, 300px));
-        width: rem(150);
-        height: rem(150);
+        right: calc(50% - min(48vw, 250px));
+        width: rem(100);
+        height: rem(100);
     }
 }
 
 .video__container {
     display: flex;
     flex-direction: column;
+    margin-top: rem(40);
     @include mq(md) {
         margin-top: rem(20);
         flex-direction: initial;

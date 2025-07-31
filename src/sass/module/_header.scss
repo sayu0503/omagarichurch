@@ -11,6 +11,9 @@
     left: 0;
     right: 0;
     transition: background-color 0.3s ease;
+    @include mq(md){
+         height: rem(80);
+    }
 }
 
 .header.is-open {
@@ -79,7 +82,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    gap: rem(2);
+    gap: rem(3);
 }
 
 
@@ -107,13 +110,18 @@
 
 .header__link-icon {
     width: rem(20);
-    height: rem(20);
+    height: rem(22);
+}
+
+.header__link-icon--size {
+    width: rem(27);
+    height: rem(22);
 }
 
 .header__link-label {
     font-size: rem(18);
     font-weight: $medium;
     font-family: $second-font-family;
-    color: $blue-black;
+    color: $blue;
     line-height: calc(27 / 18);
 }
