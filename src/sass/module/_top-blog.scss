@@ -15,7 +15,7 @@
 
 .top-blog__contents {
     margin-top: rem(24);
-    padding-inline: rem(10);
+    padding-inline: rem(20);
     @include mq(md){
        padding-inline: rem(0);
     }

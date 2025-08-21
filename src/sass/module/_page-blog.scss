@@ -16,10 +16,12 @@
     display: grid;
     gap: rem(40);
     grid-template-columns: 1fr;
+    padding-inline: rem(20);
 
     @include mq(md) {
         grid-template-columns: 1fr 1fr;
         gap: rem(34);
+        padding-inline: rem(0);
     }
 }
 

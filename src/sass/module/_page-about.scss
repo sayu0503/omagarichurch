@@ -368,6 +368,7 @@
 
     @include mq(md) {
         margin-top: rem(0);
+        font-size: rem(32);
     }
 }
 
